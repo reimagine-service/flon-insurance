@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RSI_Coverage_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Coverage Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Liability</fullName>
+                <default>false</default>
+                <label>Liability</label>
+            </value>
+            <value>
+                <fullName>Uninsured Motorist coverage</fullName>
+                <default>false</default>
+                <label>Uninsured Motorist coverage</label>
+            </value>
+            <value>
+                <fullName>PIP</fullName>
+                <default>false</default>
+                <label>PIP</label>
+            </value>
+            <value>
+                <fullName>Collision</fullName>
+                <default>false</default>
+                <label>Collision</label>
+            </value>
+            <value>
+                <fullName>Dwelling coverage</fullName>
+                <default>false</default>
+                <label>Dwelling coverage</label>
+            </value>
+            <value>
+                <fullName>Personal Property coverage</fullName>
+                <default>false</default>
+                <label>Personal Property coverage</label>
+            </value>
+            <value>
+                <fullName>Windstorm</fullName>
+                <default>false</default>
+                <label>Windstorm</label>
+            </value>
+            <value>
+                <fullName>Fire</fullName>
+                <default>false</default>
+                <label>Fire</label>
+            </value>
+            <value>
+                <fullName>Vandalism</fullName>
+                <default>false</default>
+                <label>Vandalism</label>
+            </value>
+            <value>
+                <fullName>Visitor Injuries</fullName>
+                <default>false</default>
+                <label>Visitor Injuries</label>
+            </value>
+            <value>
+                <fullName>Theft</fullName>
+                <default>false</default>
+                <label>Theft</label>
+            </value>
+            <value>
+                <fullName>Water Damage</fullName>
+                <default>false</default>
+                <label>Water Damage</label>
+            </value>
+            <value>
+                <fullName>Other Structure</fullName>
+                <default>false</default>
+                <label>Other Structure</label>
+            </value>
+            <value>
+                <fullName>Loss of use</fullName>
+                <default>false</default>
+                <label>Loss of use</label>
+            </value>
+            <value>
+                <fullName>Flood</fullName>
+                <default>false</default>
+                <label>Flood</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

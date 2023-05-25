@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Account</contextRecordType>
+    <if>
+        <childNode>Policy_Recommendation</childNode>
+        <label>Is Married Condition</label>
+        <name>Is_Married_Condition</name>
+        <childNodeExpression>
+            <childName>Policy_Recommendation</childName>
+            <expression>ISPICKVAL($Record.Marital_Status__c, &apos;Married&apos;) &amp;&amp; $Record.Active_Auto_Policy__c = true</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Update Policy from Account</label>
+    <recommendationLimit>
+        <childNode>Is_Married_Condition</childNode>
+        <label>Limit Recommendation</label>
+        <name>Limit_Recommendation</name>
+        <filterMode>Accepted</filterMode>
+        <filterMode>Rejected</filterMode>
+        <lookbackDuration>90</lookbackDuration>
+        <maxRecommendationCount>1</maxRecommendationCount>
+    </recommendationLimit>
+    <recommendationLoad>
+        <label>Policy Recommendation</label>
+        <name>Policy_Recommendation</name>
+        <condition>
+            <field>Object__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Account</value>
+            </value>
+        </condition>
+        <condition>
+            <field>Issue_Type__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Account Information</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Limit_Recommendation</childNode>
+        <label>Output</label>
+        <name>Output_7c96b2f2c9a2403c9a29fba0f2aca17d</name>
+    </union>
+</RecommendationStrategy>

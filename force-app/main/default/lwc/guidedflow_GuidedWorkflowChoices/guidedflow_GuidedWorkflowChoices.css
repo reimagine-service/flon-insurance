@@ -1,0 +1,41 @@
+/* .button {
+  background: none;
+}
+
+.button:active{
+    background:olive;
+}
+
+.button:focus{
+    background:olive;
+} */
+
+lightning-button.button {
+	--sds-c-button-brand-color-background: none;
+    
+}
+lightning-button.button(.active) {
+	--sds-c-button-brand-color-background: olive;
+    
+}
+lightning-button.button(.focus) {
+	--sds-c-button-brand-color-background: olive;
+    
+}
+.lwcInputElement > label.slds-form-element__label {
+    color: rgb(233, 14, 14); 
+    font-size: 100px !important;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.lwcInputInner {
+    display: block;
+    width: 100%;
+    margin-bottom:10px;
+}
+.strong-text {
+     font-weight: bold;
+     }
+.sample{
+       overflow:initial;
+}

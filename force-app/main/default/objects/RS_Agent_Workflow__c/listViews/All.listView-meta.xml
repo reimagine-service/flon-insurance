@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>OrderNumber__c</columns>
+    <columns>RS_Scripting_Data__c</columns>
+    <columns>RS_Step_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>RS_Action_Name__c</columns>
+    <columns>RS_Action_Type__c</columns>
+    <columns>RS_Agent_Instructions__c</columns>
+    <columns>RS_Agent_Selection__c</columns>
+    <columns>RS_Case_Fields_to_Update__c</columns>
+    <columns>RS_AutomatedNotes__c</columns>
+    <columns>RS_Text_Field_Type__c</columns>
+    <columns>Text_Field_To_Update__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

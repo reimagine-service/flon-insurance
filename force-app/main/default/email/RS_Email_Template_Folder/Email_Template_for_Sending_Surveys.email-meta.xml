@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Email Template for Sending Surveys</name>
+    <style>none</style>
+    <subject>Happy with resolution for case #{!Case.CaseNumber}? | Let us know how you feel</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+We would be grateful if you could spare 2 mins to answer a short survey and let us know how was your experience with us for your issue #{!Case.CaseNumber}.
+
+Customer Survey -
+{!Case.InvitationLink__c}
+
+* The link will be active till 3 days.
+* The information gathered will be used for quality assurance only.
+* We value your privacy and do not sell personal information to third parties.
+
+
+We appreciate your time and feedback and assure you of our best services.
+Thank you</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

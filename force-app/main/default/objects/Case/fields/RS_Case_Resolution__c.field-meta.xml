@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_Case_Resolution__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Resolution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Query Resolved</fullName>
+                <default>false</default>
+                <label>Query Resolved</label>
+            </value>
+            <value>
+                <fullName>Policy Renewed</fullName>
+                <default>false</default>
+                <label>Policy Renewed</label>
+            </value>
+            <value>
+                <fullName>Policy Updated</fullName>
+                <default>false</default>
+                <label>Policy Updated</label>
+            </value>
+            <value>
+                <fullName>New Policy Issued</fullName>
+                <default>false</default>
+                <label>New Policy Issued</label>
+            </value>
+            <value>
+                <fullName>Customer Information Updated</fullName>
+                <default>false</default>
+                <label>Customer Information Updated</label>
+            </value>
+            <value>
+                <fullName>Resolved By Bot</fullName>
+                <default>false</default>
+                <label>Resolved By Bot</label>
+            </value>
+            <value>
+                <fullName>Field assistance required</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Field assistance required</label>
+            </value>
+            <value>
+                <fullName>Resolved over phone</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Resolved over phone</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

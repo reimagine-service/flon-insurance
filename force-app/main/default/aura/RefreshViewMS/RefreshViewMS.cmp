@@ -1,0 +1,8 @@
+<aura:component implements="lightning:availableForFlowActions,force:hasRecordId,force:lightningQuickAction">
+	
+    <aura:attribute name="recordId" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:recordForm recordId = "{!v.recordId}" objectApiName="MessagingSession" layoutType="Compact" mode="edit"/>
+</aura:component>

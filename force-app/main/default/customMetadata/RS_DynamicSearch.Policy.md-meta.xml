@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Policy</label>
+    <protected>false</protected>
+    <values>
+        <field>Field_Name__c</field>
+        <value xsi:type="xsd:string">SECTION:Fields to review/confirm,Type,RS_SubType__c,Origin,AccountId,Priority,SECTION:Fields for agent to fill in,Subject,Description,RSI_Transfer_to_new_state__c,RSI_State__c,RSI_Property_Price__c,OWNER:RS_Additional_details_for_queue__c</value>
+    </values>
+    <values>
+        <field>Lookup_Field_to_Link__c</field>
+        <value xsi:type="xsd:string">RelatedRecordId</value>
+    </values>
+    <values>
+        <field>Object_Name__c</field>
+        <value xsi:type="xsd:string">Case</value>
+    </values>
+    <values>
+        <field>Update_Case_Id__c</field>
+        <value xsi:type="xsd:string">Update_Case_Id__c</value>
+    </values>
+    <values>
+        <field>isDisabled__c</field>
+        <value xsi:type="xsd:string">false,true,true,true,true,false,false,false,false,false,false,false,false</value>
+    </values>
+</CustomMetadata>

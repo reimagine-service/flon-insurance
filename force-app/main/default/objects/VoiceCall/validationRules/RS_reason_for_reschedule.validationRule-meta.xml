@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_reason_for_reschedule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED(RS_Preferred_Callback_Time__c),NOT(ISBLANK( RS_Preferred_Callback_Time__c)),ISBLANK( Reason_for_rescheduling_callback__c),OR($Profile.Name=&apos;Read Only Agent&apos;,$Profile.Name=&apos;	Read Only Supervisor&apos;))</errorConditionFormula>
+    <errorDisplayField>Reason_for_rescheduling_callback__c</errorDisplayField>
+    <errorMessage>Please provide reason for re-scheduling.</errorMessage>
+</ValidationRule>

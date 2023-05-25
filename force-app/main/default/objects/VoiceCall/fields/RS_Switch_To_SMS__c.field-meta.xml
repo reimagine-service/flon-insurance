@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_Switch_To_SMS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This flag will be enabled if customer has switched from IVR to SMS.</description>
+    <externalId>false</externalId>
+    <label>Switch To SMS</label>
+    <type>Checkbox</type>
+</CustomField>

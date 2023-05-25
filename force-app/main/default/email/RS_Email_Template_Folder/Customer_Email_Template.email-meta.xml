@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This Email template is used to notify agent if case is escalated</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Customer Email Template</name>
+    <style>none</style>
+    <subject>{!Case.Subject}</subject>
+    <textOnly>Dear {!Case.Account},
+
+Thankyou for writing to us.
+
+[This is where you need to enter the text that will be displayed as body of email]
+
+Thank You, {!Case.OwnerFullName} Customer Service Name.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

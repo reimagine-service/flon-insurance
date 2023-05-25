@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Case</contextRecordType>
+    <if>
+        <childNode>Get_Ohio_Recommendation</childNode>
+        <label>Condition for Ohio</label>
+        <name>Condition_for_Ohio</name>
+        <childNodeExpression>
+            <childName>Get_Ohio_Recommendation</childName>
+            <expression>ISPICKVAL($Record.Type, &apos;Policy&apos;) &amp;&amp; NOT(ISPICKVAL($Record.Status, &apos;Closed&apos;)) &amp;&amp; $Record.RSI_Transfer_to_new_state__c = true &amp;&amp; $Record.Account.Active_Home_Policy__c = true &amp;&amp; $Record.NBA_Ohio_Check__c = true</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Home Insurance Ohio</label>
+    <recommendationLimit>
+        <childNode>Condition_for_Ohio</childNode>
+        <label>limit</label>
+        <name>limit</name>
+        <filterMode>Accepted</filterMode>
+        <filterMode>Rejected</filterMode>
+        <lookbackDuration>90</lookbackDuration>
+        <maxRecommendationCount>1</maxRecommendationCount>
+    </recommendationLimit>
+    <recommendationLoad>
+        <label>Get Ohio Recommendation</label>
+        <name>Get_Ohio_Recommendation</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>New Policy coverage for Home insurance Ohio</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>limit</childNode>
+        <label>Output</label>
+        <name>Output_2f87f72c86c74d10acdee533e8c27132</name>
+    </union>
+</RecommendationStrategy>

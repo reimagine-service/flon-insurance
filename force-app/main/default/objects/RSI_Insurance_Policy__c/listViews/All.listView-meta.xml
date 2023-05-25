@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>RSI_Policy_Holder__c</columns>
+    <columns>RSI_Address__City__s</columns>
+    <columns>RSI_Address__CountryCode__s</columns>
+    <columns>RSI_Address__StateCode__s</columns>
+    <columns>RSI_Address__Street__s</columns>
+    <columns>RSI_Address__PostalCode__s</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>RSI_Insurance_Policy__c.Auto</value>
+    </filters>
+    <label>All</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+        <group>RS_Sharing_Setting_Agent_Group_1</group>
+    </sharedTo>
+</ListView>

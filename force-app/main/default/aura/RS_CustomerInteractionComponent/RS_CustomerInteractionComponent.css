@@ -1,0 +1,21 @@
+.THIS{
+    overflow-x: scroll;
+}
+.THIS.WordBreak {
+    word-wrap: break-word;
+}
+.THIS .linkclass {
+    margin-left: 10px;
+}
+
+.THIS .slds-theme_backgroundColor-lightgray{
+    background-color: lightgray;
+}
+
+.THIS .my-card {
+    display: block;
+}
+.THIS .slds-card__header.slds-grid{
+    padding-top:0px;
+    padding-bottom:0px;
+}

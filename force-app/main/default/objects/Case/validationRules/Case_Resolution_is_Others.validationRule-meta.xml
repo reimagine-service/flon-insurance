@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Resolution_is_Others</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(RS_Case_Resolution__c, &quot;Others&quot;),
+ISBLANK(RS_Case_Resolution_Others__c)
+)</errorConditionFormula>
+    <errorDisplayField>RS_Case_Resolution_Others__c</errorDisplayField>
+    <errorMessage>Please provide case resolution details</errorMessage>
+</ValidationRule>

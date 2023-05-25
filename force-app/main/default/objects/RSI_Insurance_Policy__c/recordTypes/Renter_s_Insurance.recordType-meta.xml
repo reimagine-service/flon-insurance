@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renter_s_Insurance</fullName>
+    <active>true</active>
+    <label>Renter&apos;s Insurance</label>
+    <picklistValues>
+        <picklist>RSI_Item_Type__c</picklist>
+        <values>
+            <fullName>Furniture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jewellary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kitchen Item</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RSI_Policy_Type__c</picklist>
+        <values>
+            <fullName>Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renter Insurance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Discussion</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,14 @@
+<p style=" border-left: 10px;margin-left:10px">
+
+<img style="margin-left:-20px" src="https://amazonaccelerator--rsinsdev01.sandbox.file.force.com/servlet/servlet.ImageServer?id=0153C000000Q85k&oid=00D3C0000004ydT&lastMod=1663241075000"/>
+
+
+<p>Dear {!Case.Account},</p>
+<p>Thankyou for writing to us.</p>
+
+<b><i><p>[This is where you need to enter the text that will be displayed as body of email]</p></i></b>
+
+<p>Thank You,</br>
+{!Case.OwnerFullName}</br>
+Customer Service Name.</p>
+</p>

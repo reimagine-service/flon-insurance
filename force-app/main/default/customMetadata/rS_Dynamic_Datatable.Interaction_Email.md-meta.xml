@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Interaction:Email</label>
+    <protected>false</protected>
+    <values>
+        <field>Dynamic_Field__c</field>
+        <value xsi:type="xsd:string">parent.account.id</value>
+    </values>
+    <values>
+        <field>Field_Value__c</field>
+        <value xsi:type="xsd:string">RS_ID_Link__c,Email_Name__c,CreatedDate,RS_ObjectFormula__c,Parent.CaseNumber,Parent.Type,RS_Case_Owner_Name__c,Customer_Sentiments__c</value>
+    </values>
+    <values>
+        <field>Header_Value__c</field>
+        <value xsi:type="xsd:string">Email Name,
+CaseNo,Date,CaseNumber,CaseNo,Issue,Interacted with,Sentiment</value>
+    </values>
+    <values>
+        <field>Limit__c</field>
+        <value xsi:type="xsd:string">20</value>
+    </values>
+    <values>
+        <field>ObjectAPI_Name__c</field>
+        <value xsi:type="xsd:string">EmailMessage</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:type="xsd:string">SELECT Status,Account.Name,Owner.Name from LiveChatTranscript</value>
+    </values>
+    <values>
+        <field>RS_LastNDays__c</field>
+        <value xsi:type="xsd:string">120</value>
+    </values>
+    <values>
+        <field>Static_Field__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Table_Title__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">url,text,date,url,text,text,text,text</value>
+    </values>
+    <values>
+        <field>typeAttributes__c</field>
+        <value xsi:type="xsd:string">{&quot;label&quot;: { &quot;fieldName&quot;: &quot;Email_Name__c&quot; }, &quot;target&quot;: &quot;_self&quot;}@
+{}@
+{}@
+{&quot;label&quot;: { &quot;fieldName&quot;: &quot;Parent.CaseNumber&quot; }, &quot;target&quot;: &quot;_self&quot;}@
+{}@
+{}@
+{}@
+{}</value>
+    </values>
+</CustomMetadata>

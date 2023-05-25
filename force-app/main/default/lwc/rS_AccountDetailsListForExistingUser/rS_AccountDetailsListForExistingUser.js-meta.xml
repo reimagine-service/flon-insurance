@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>54.0</apiVersion>
+	<isExposed>true</isExposed>
+	<targets>
+		<target>lightning__RecordPage</target>
+		<target>lightning__AppPage</target>
+		<target>lightning__HomePage</target>
+		<target>lightning__FlowScreen</target>
+	</targets>
+	<targetConfigs>
+	<targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage,lightning__FlowScreen">
+      <property name="firstname" label="firstname" type="String" default=""></property>
+	  <property name="lastname" label ="lastname`" type="String" />
+	  <property name="accNumber" label ="accNumber`" type="String" />
+	  <property name="emailId" label ="emailId`" type="String" />
+	  <property name="phoneNumber" label ="phoneNumber`" type="String" />
+	  <property name="condition" label ="condition`" type="String" />
+	  <property name="InteractionId" label ="InteractionId`" type="String" />
+	  
+    </targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>

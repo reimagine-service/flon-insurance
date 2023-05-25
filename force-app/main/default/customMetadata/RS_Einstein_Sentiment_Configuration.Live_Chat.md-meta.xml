@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Live Chat</label>
+    <protected>false</protected>
+    <values>
+        <field>Case_Field_Name__c</field>
+        <value xsi:type="xsd:string">CaseId</value>
+    </values>
+    <values>
+        <field>Customer_sentiments__c</field>
+        <value xsi:type="xsd:string">Customer_Sentiments__c</value>
+    </values>
+    <values>
+        <field>Interaction_Lookup_Field__c</field>
+        <value xsi:type="xsd:string">Chat_Transcript__c</value>
+    </values>
+    <values>
+        <field>Interaction_Object_API__c</field>
+        <value xsi:type="xsd:string">LiveChatTranscript</value>
+    </values>
+    <values>
+        <field>Sentiment_Field_to_analyse__c</field>
+        <value xsi:type="xsd:string">Body</value>
+    </values>
+    <values>
+        <field>Sentiment_score_field_to_Update__c</field>
+        <value xsi:type="xsd:string">Customer_Sentiment_Score__c</value>
+    </values>
+</CustomMetadata>

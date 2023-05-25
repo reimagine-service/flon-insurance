@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Chat Transcript" icon-name="custom:custom14" >
+        <div style="height:200px;overflow-y: scroll">        
+            <ul class="slds-m-around_medium">
+                <template for:each={mapData} for:item="data" >
+                   
+                    <li key={data.key} style={data.visibilityMsg}>                    
+                    UserMessage :  {data.userMessage}                   
+                    </li>
+                     <li key={data.key} style={data.visibility}>
+                    BotResponse :  {data.botResponse}
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
+</template>

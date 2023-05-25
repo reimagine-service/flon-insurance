@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>MessagingSession</label>
+    <protected>false</protected>
+    <values>
+        <field>Dynamic_Field__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Interaction_Call_Type__c</field>
+        <value xsi:type="xsd:string">Origin</value>
+    </values>
+    <values>
+        <field>Interaction_Duration__c</field>
+        <value xsi:type="xsd:string">RS_Total_duration__c</value>
+    </values>
+    <values>
+        <field>Interaction_From__c</field>
+        <value xsi:type="xsd:string">Messaging_End_User__c</value>
+    </values>
+    <values>
+        <field>Interaction_Name__c</field>
+        <value xsi:type="xsd:string">Name</value>
+    </values>
+    <values>
+        <field>Interaction_Status__c</field>
+        <value xsi:type="xsd:string">Status</value>
+    </values>
+    <values>
+        <field>Interaction_Time_Field__c</field>
+        <value xsi:type="xsd:string">StartTime</value>
+    </values>
+    <values>
+        <field>Interaction_Type__c</field>
+        <value xsi:type="xsd:string">SMS</value>
+    </values>
+    <values>
+        <field>OrderBy_Field__c</field>
+        <value xsi:type="xsd:string">CreatedDate</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:type="xsd:string">SELECT Id,AcceptTime ,name,Origin , Status,StartTime,EndTime,Messaging_End_User__c,RS_Total_duration__c FROM MessagingSession</value>
+    </values>
+    <values>
+        <field>Static_Field__c</field>
+        <value xsi:type="xsd:string">CaseId</value>
+    </values>
+</CustomMetadata>

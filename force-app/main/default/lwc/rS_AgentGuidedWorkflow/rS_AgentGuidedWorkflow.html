@@ -1,0 +1,46 @@
+<template>
+  <!--div class="slds-text-body_regular slds-p-around_small"-->
+    <lightning-card>
+      <div>
+        <div class="slds-grid slds-gutters slds-wrap slds-p-left_small slds-p-top_small slds-p-right_small">
+          <div class="slds-col slds-form-element ">
+            <span class="slds-text-heading_medium slds-truncate slds-p-around_medium slds-card__header-link"><b>{guidedworkflowHeadingLabel}</b></span>
+          </div>
+          <div class="slds-col slds-form-element">
+            <Lightning-button class="slds-float-right slds-p-right_xx-large  slds-float_right" variant="neutral" label="Refresh" onclick={refreshWorkflowData}></Lightning-button>
+          </div>
+        </div>
+
+        <div class="slds-scrollable"  style="height:300px; margin-left: 18px">
+          <template for:each={workflowSets} for:item="workflowset">
+              <c-guidedflow_-guided-workflow-choices key={workflowset.parentWorkflowUniqueId} 
+              agent-instruction={workflowset.parentAgentInstraction}
+              scripting={workflowset.parentScripting} focus={workflowset.focus}
+              choices={workflowset.choices} 
+                oncallrenderworkflows={renderWorkflows}>
+                </c-guidedflow_-guided-workflow-choices>
+          </template>               
+        </div>
+      </div>
+      </br>
+<template if:true={unhideConfirmationScreen}>
+      <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+          <div class="slds-modal__container">
+           <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"                            
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+              </button>
+          
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <c-r-s_-guided-flow-confirmation-screen  case-record-type={caseRecordTypeName} workflow-choice={workflowChoiceId} metadata-rec={objectApiName} text-fields-to-update={casefieldstoupdate}></c-r-s_-guided-flow-confirmation-screen>
+          </div>
+          
+          </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>
+</lightning-card>
+</template>

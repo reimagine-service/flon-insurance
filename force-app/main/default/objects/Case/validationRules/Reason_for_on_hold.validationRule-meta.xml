@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_on_hold</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status, &quot;On Hold&quot;),
+ISBLANK(RS_Reason_for_On_Hold__c),!OR(ISPICKVAL(PRIORVALUE(Status), &quot;Closed&quot;),ISPICKVAL(PRIORVALUE(Status), &quot;Cancelled&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>RS_Reason_for_On_Hold__c</errorDisplayField>
+    <errorMessage>Please provide reason for on hold case status</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Customer Sentiment Trend" icon-name="utility:chart">
+        <template if:true={chartConfiguration}>
+            <c-chartjssentiment chart-config={chartConfiguration}></c-chartjssentiment>
+        </template>
+</lightning-card>
+</template>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Case</contextRecordType>
+    <if>
+        <childNode>Recommendation_for_Florida</childNode>
+        <label>Filter Recommendation</label>
+        <name>Filter_Recommendation</name>
+        <childNodeExpression>
+            <childName>Recommendation_for_Florida</childName>
+            <expression>ISPICKVAL($Record.Type, &apos;Policy&apos;) &amp;&amp; NOT(ISPICKVAL($Record.Status, &apos;Closed&apos;)) &amp;&amp; $Record.RSI_Transfer_to_new_state__c = true &amp;&amp; $Record.Account.Active_Home_Policy__c = true &amp;&amp; $Record.NBA_Florida_Check__c = true</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Home Insurance Policy</label>
+    <recommendationLimit>
+        <childNode>Filter_Recommendation</childNode>
+        <label>Limit</label>
+        <name>Limit</name>
+        <filterMode>Accepted</filterMode>
+        <filterMode>Rejected</filterMode>
+        <lookbackDuration>90</lookbackDuration>
+        <maxRecommendationCount>1</maxRecommendationCount>
+    </recommendationLimit>
+    <recommendationLoad>
+        <label>Recommendation for Florida</label>
+        <name>Recommendation_for_Florida</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>New Policy coverage for Home insurance Florida</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Limit</childNode>
+        <label>Output</label>
+        <name>Output_2862b3d6c9de46c7b481daf155d2fd92</name>
+    </union>
+</RecommendationStrategy>

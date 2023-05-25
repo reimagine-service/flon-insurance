@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CaseEntitlementProcessId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseEntitlementProcessId</shortDescription>
+        <value>5527j0000008R3r</value>
+    </labels>
+    <labels>
+        <fullName>RSI_BaseUrl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RSI_BaseUrl</shortDescription>
+        <value>https://amazonaccelerator--rsdemot2.sandbox.lightning.force.com/</value>
+    </labels>
+    <labels>
+        <fullName>RSI_Customer_Portal_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RSI Customer Portal Name</shortDescription>
+        <value>Reimagine_Insurance_Service_Portal</value>
+    </labels>
+    <labels>
+        <fullName>RSI_Customer_Portal_Profile_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RSI Customer Portal Profile Name</shortDescription>
+        <value>Read Only Community User</value>
+    </labels>
+    <labels>
+        <fullName>RS_Domain_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS Domain Name</shortDescription>
+        <value>https://amazonaccelerator--rsdemot2.sandbox.lightning.force.com/</value>
+    </labels>
+    <labels>
+        <fullName>RS_EST_TimeZone</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_ESTTimeZone</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>RS_EmailToCase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_EmailToCase</shortDescription>
+        <value>rsinsqaorg@gmail.com</value>
+    </labels>
+    <labels>
+        <fullName>RS_Guided_Workflow_Heading_Label_Internal_Users</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Guided Workflow Heading Label : Internal Users</shortDescription>
+        <value>Agent Guided Workflow</value>
+    </labels>
+    <labels>
+        <fullName>RS_Guided_Workflow_Heading_Label_Portal_Users</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Guided Workflow Heading Label : Portal Users</shortDescription>
+        <value>Create Case</value>
+    </labels>
+    <labels>
+        <fullName>RS_High_end_customer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_High_end_customer</shortDescription>
+        <value>High_End_Customer_Configuration</value>
+    </labels>
+    <labels>
+        <fullName>RS_New_customer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_New_customer</shortDescription>
+        <value>New_Customer_Configuration</value>
+    </labels>
+    <labels>
+        <fullName>RS_Normal_Customer_Configuration</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_Normal_Customer_Configuration</shortDescription>
+        <value>Normal_Customer_Configuration</value>
+    </labels>
+    <labels>
+        <fullName>RS_Retention_Risk_Customer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_Retention_Risk_Customer</shortDescription>
+        <value>Retention_Risk_Customer</value>
+    </labels>
+    <labels>
+        <fullName>RS_forAnyOtherCase</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>for any other case</shortDescription>
+        <value>For any other case</value>
+    </labels>
+    <labels>
+        <fullName>RS_forCaseNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>For Case Number</shortDescription>
+        <value>For Case Number</value>
+    </labels>
+    <labels>
+        <fullName>RS_forRegarding</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>For Regarding</shortDescription>
+        <value>, regarding</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition1Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition1Header</shortDescription>
+        <value>Condition: Customer not identified</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition1Instruction</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition1Instruction</shortDescription>
+        <value>Instruction: Identify customer based on either account #, first name or last name</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition1Script</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition1Script</shortDescription>
+        <value>Script: Hello, (Good Morning/Good Afternoon/Good Evening, based on time). In order to serve you
+better, we need to start with your account identification. May I please know your account number or
+name?</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition2Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition2Header</shortDescription>
+        <value>Condition: Customer identified, but not verified</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition2Instruction</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition2Instruction</shortDescription>
+        <value>Instruction: Click on &apos;Search existing customer&apos; and then click on &apos;Next&apos; to get customer details for verification</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition2Script</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition2Script</shortDescription>
+        <value>Script: Hello (customer name), please wait while we fetch your account details</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition3Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition3Header</shortDescription>
+        <value>Condition: Customer has identified and verified</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition3Instruction</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition3Instruction</shortDescription>
+        <value>Instruction: Please click the &apos;Refresh&apos; button to have the authentication changes reflected on the page. Then move to Guided Workflow Tab to assist the customer.</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition4Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition4Header</shortDescription>
+        <value>Condition: New Customer</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchCondition4Instruction</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchCondition4Instruction</shortDescription>
+        <value>Instruction: If Caller is a new customer, create a new customer record using the &apos;Create a new customer record&apos; option.</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchInstruction1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchInstruction1</shortDescription>
+        <value>Instruction: Select the correct customer record from the list and ask customer date of birth for verification. If customer provides correct date of birth then click on Verify button.</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchInstruction2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchInstruction2</shortDescription>
+        <value>Additional instruction: If customer is not able to provide correct date of birth, then agent can verify customer by email address</value>
+    </labels>
+    <labels>
+        <fullName>RS_lwcSearchScript1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_lwcSearchScript1</shortDescription>
+        <value>Script: May I please know your date of birth for verification</value>
+    </labels>
+    <labels>
+        <fullName>SMS_Channel_Number</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS Channel Number</shortDescription>
+        <value>TEXT_US_13392127425</value>
+    </labels>
+    <labels>
+        <fullName>SNSMessagingTemplate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RS_SNSMessagingTemplate</shortDescription>
+        <value>Outbound_Message</value>
+    </labels>
+    <labels>
+        <fullName>rs_TabConfigurationStartNode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>rs_TabConfigurationStartNode</shortDescription>
+        <value>Interaction</value>
+    </labels>
+</CustomLabels>

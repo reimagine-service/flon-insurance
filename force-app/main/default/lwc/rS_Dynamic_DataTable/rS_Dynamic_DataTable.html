@@ -1,0 +1,50 @@
+<template>
+    <div if:true={displayTable} >
+        <lightning-card>
+            <div class="slds-p-horizontal_small"></div>
+   
+            <lightning-layout multiple-rows="true" vertical-align="end">
+                <lightning-layout-item size="12">
+                     <div if:true={DataTableResponseWrappper} class="slds-scrollable--y">
+                        <div class="slds-text-heading_small">{DataTableResponseWrappper.TableTitle}</div>
+                        <!--
+                        <lightning-datatable data={finalSObjectDataList} 
+                                            columns={DataTableResponseWrappper.lstDataTableColumns} 
+                                            key-field="Id"  
+                                            hide-checkbox-column="true">
+                        </lightning-datatable>
+                        -->
+                         <c-rs_-codex-data-table data={finalSObjectDataList} 
+                                            columns={DataTableResponseWrappper} 
+                                            key-field="Id"  
+                                            hide-checkbox-column="true">
+                        </c-rs_-codex-data-table>
+                         
+                         <div class="slds-m-around_medium">
+                            <p class="slds-m-vertical_medium content" style="text-align: center;">
+                                    Displaying {startingRecord} to {endingRecord} of {totalRecountCount} records.
+                                    Page {page} of {totalPage}. </p>
+                                 
+                            <!--c-rs_paginator onprevious={previousHandler} onnext={nextHandler}></c-rs_paginator-->
+                             <lightning-layout>
+                                <lightning-layout-item if:true={showNavbuttonPrev} >
+                                    <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler}></lightning-button>
+                                </lightning-layout-item>
+                                <lightning-layout-item flexibility="grow"></lightning-layout-item>
+                                <lightning-layout-item if:true={showNavbuttonNext}>
+                                    <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right" onclick={nextHandler}></lightning-button>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </div>
+                     </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        </div>
+
+        <div if:false={displayTable} >
+            <lightning-card>
+               <p> No Data available!!! </p>
+            </lightning-card>
+        </div>
+    </template>

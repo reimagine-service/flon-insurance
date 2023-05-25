@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Callback_Cancelled__c</fullName>
+    <description>Formula field to display callback status if cancelled</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(RS_Callback_Status__c, &apos;Cancelled&apos;)  , True, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If Callback Status Cancelled</inlineHelpText>
+    <label>Callback Cancelled</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_to_update_Insurance_Agent</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR($Profile.Name=&apos;Read Only Insurance Agent&apos;,$Profile.Name=&apos;Read Only Agent&apos;,$Profile.Name=&apos;Read Only Supervisor&apos;),
+ISCHANGED(RSI_Insurance_Agent__c),OR(ISBLANK(RSI_Reason_to_update_insurance_agent__c),!ISCHANGED(RSI_Reason_to_update_insurance_agent__c)))</errorConditionFormula>
+    <errorMessage>Please provide reason of updating insurance agent.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Account_Exists</name>
+        <label>Account Exists</label>
+        <locationX>374</locationX>
+        <locationY>408</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RS_Account_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Records_related_to_voice_call.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RS_Create_BTTS_TrainData</targetReference>
+            </connector>
+            <label>Account Exists</label>
+        </rules>
+    </decisions>
+    <description>To create external object data</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>CallResult</name>
+        <dataType>String</dataType>
+        <expression>IF({!$Record.CallDisposition} = &quot;Completed&quot;, &quot;Answered&quot;, &quot;Unanswered&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>PersonDOB</name>
+        <dataType>String</dataType>
+        <expression>TEXT(MONTH({!$Record.Related_Account__r.PersonBirthdate}))+ &quot;/&quot; + TEXT(DAY({!$Record.Related_Account__r.PersonBirthdate}))+ &quot;/&quot; + TEXT(YEAR({!$Record.Related_Account__r.PersonBirthdate}))</expression>
+    </formulas>
+    <formulas>
+        <name>PersonGender</name>
+        <dataType>String</dataType>
+        <expression>IF(TEXT({!$Record.Related_Account__r.Salutation}) = &quot;Mr.&quot;, &quot;M&quot;,(
+ IF(TEXT({!$Record.Related_Account__r.Salutation}) = &quot;Mrs.&quot;, &quot;F&quot;,(
+ IF(TEXT({!$Record.Related_Account__r.Salutation}) = &quot;Ms.&quot;, &quot;F&quot;,
+		NULL)))))</expression>
+    </formulas>
+    <formulas>
+        <description>To store date</description>
+        <name>RS_CallStartedDate</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(TEXT(DATEVALUE({!$Record.CallStartDateTime})),&apos;-&apos;,&apos;/&apos;)</expression>
+    </formulas>
+    <formulas>
+        <description>To store time.</description>
+        <name>RS_CallStartedTime</name>
+        <dataType>String</dataType>
+        <expression>LEFT(RIGHT(text( {!$Record.CallStartDateTime}),9),8)</expression>
+    </formulas>
+    <interviewLabel>RS_Create_ {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RS_Create_BTTS_TrainData</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>To create external object data</description>
+        <name>RS_Create_BTTS_TrainData</name>
+        <label>RS_Create_BTTS_TrainData</label>
+        <locationX>242</locationX>
+        <locationY>528</locationY>
+        <inputAssignments>
+            <field>AccountNumber__c</field>
+            <value>
+                <elementReference>$Record.Related_Account__r.AccountNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CallResult__c</field>
+            <value>
+                <elementReference>CallResult</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CustomerName__c</field>
+            <value>
+                <stringValue>{!$Record.Related_Account__r.FirstName} {!$Record.Related_Account__r.LastName}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DateOfCall__c</field>
+            <value>
+                <elementReference>RS_CallStartedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Id__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IssueType__c</field>
+            <value>
+                <elementReference>$Record.IVRIntent__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PatientDOB__c</field>
+            <value>
+                <elementReference>PersonDOB</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PatientGender__c</field>
+            <value>
+                <elementReference>PersonGender</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PatientRegion__c</field>
+            <value>
+                <elementReference>$Record.Related_Account__r.ShippingState</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TimeOfCall__c</field>
+            <value>
+                <elementReference>RS_CallStartedTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>BTTS_TrainData__x</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Account_Records_related_to_voice_call</name>
+        <label>Get Account Records related to voice call</label>
+        <locationX>374</locationX>
+        <locationY>288</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_Exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountNumber</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Related_Account__r.AccountNumber</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>AccountNumber</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <object>VoiceCall</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Get_Account_Records_related_to_voice_call</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

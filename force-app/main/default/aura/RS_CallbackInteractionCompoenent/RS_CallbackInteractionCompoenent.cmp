@@ -1,0 +1,111 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" Controller="RS_CallbackInteractionController" access="global">
+    <aura:attribute name="domainurl" type="String"/>
+    <!--aura:attribute name="PageNumber" type="integer" default="1"/-->
+    <aura:attribute name="TotalPages" type="integer" default="0"/>
+    <!--aura:attribute name="TotalRecords" type="integer" default="0"/-->
+    <aura:attribute name="RecordStart" type="integer" default="0"/>
+    <aura:attribute name="RecordEnd" type="integer" default="0"/>
+    <aura:attribute name="pageSize" type="integer" default="2"/>
+    <aura:attribute name="listInteraction" type="List" default=""/>  
+    <aura:attribute name="navigateType" type="string" default="initialLoad"/>
+    <aura:attribute name="totalRecords" type="integer" />
+    <aura:attribute name="pageNumber" type="integer" />
+    <aura:attribute name="lastPageNumber" type="integer"/>
+    <aura:attribute name="dataId" type="integer" />
+    <aura:attribute name="counter" type="integer"/>
+    <aura:attribute name="bool" type="boolean" default="true"/>
+    <aura:attribute name="CaseListPaginateWise" type="list" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInitialization}"/>
+    <lightning:card>
+        <aura:if isTrue="{!v.bool}">
+        <article class="slds-m-around_none">
+            <header class="highlights slds-clearfix slds-page-header slds-page-header_record-home slds-m-top_none" style="padding-botton:0px">
+                <div class="slds-card__header slds-grid slds-m-top_none">
+                    <div class="slds-media__figure">
+                       <lightning:icon iconName="action:call" alternativeText="Click to Call" size="x-small" title="x-small size"/>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title slds-text-heading_medium">
+                            <span>Callback Scheduled For Today</span>
+                        </h2>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="slds-card__header">
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--striped" cellpadding="0" cellspacing="0" bgcolor="#000000">
+                    <thead>
+                        <tr class="slds-line-height_reset slds-text-title_caps">
+                            <th class="" scope="col" minColumnWidth="15px">
+                                <div class="slds-truncate"  title="Channel">Voice Call</div>
+                            </th>
+                            <th class="" scope="col" minColumnWidth="15px">
+                                <div class="slds-truncate"  title="Channel">Call Reason</div>
+                            </th>
+                            <th class="" scope="col" minColumnWidth="15px">
+                                <div class="slds-truncate" title="Recieved">Issue Type</div>
+                            </th>
+                            <th class="" scope="col" minColumnWidth="15px">
+                                <div class="slds-truncate" title="CType">From</div>
+                            </th>
+                            <th class="" scope="col" minColumnWidth="15px">
+                                <div class="slds-truncate" title="From">Initiated Date/Time</div>
+                            </th>
+                            <th class="" scope="col" minColumnWidth="15px">
+                                <div class="slds-truncate" title="Disposition">Preferred Date/Time</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <!-- Iterating the Interaction list-->
+                        <aura:iteration items="{!v.CaseListPaginateWise}" var ="record" indexVar="i">
+                            <tr class="slds-hint-parent">
+                                <td data-label="Voice Call">
+                                    <div>
+                                            <!--td data-label="Interaction"-->
+                                            <div class="slds-truncate">
+                                                <a href="javascript:void(0);" onclick="{!c.handleLink}" data-record="{!record.channelID}">{!record.name}</a>
+                                            </div>
+                                            <!--lightning:formattedUrl value="{!'/' +record.channelID}" label='abc'/-->
+                                            <!--/td-->
+                                    </div>
+                                </td>
+                                <td data-label="Channel Type">
+                                    <div class="slds-truncate" title="Channel Type">{!record.callReason}</div>
+                                </td>
+                                <td data-label="Recieved Date Time">
+                                    <div class="slds-truncate" title="Recieved">{!record.issueType} </div>
+                                </td>
+                                <td data-label="Call Type">
+                                    <div class="slds-truncate" title="From">{!record.phone}</div>
+                                </td>      
+                                <td data-label="From">
+                                    <div class="slds-truncate" title="From">{!record.receivedDateTime}</div>
+                                </td>
+                                <td data-label="Call Disposition">
+                                    <div class="slds-truncate" title="Call Disposition">{!record.preferredCallbackTime}</div>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+            <aura:if isTrue="{!(v.pageNumber!=v.lastPageNumber)}">
+                <lightning:button variant="brand" label="Next" onclick="{!c.goToNext}" class="slds-float_right"/>
+            </aura:if>
+            <aura:if isTrue="{!v.pageNumber!=1}">
+                <lightning:button variant="brand" label="Previous" onclick="{!c.goToPrevious}" class="slds-float_left"/>
+            </aura:if> 
+        </article>
+            <aura:set attribute="else">
+                 <p>
+            <lightning:formattedRichText class="slds-align_absolute-center" value=" &lt;b&gt;No call scheduled for today!&lt;/b&gt;"/>
+        </p>
+      
+    </aura:set>
+        </aura:if>
+        
+    </lightning:card>
+    
+</aura:component>

@@ -1,0 +1,18 @@
+.outputFont {
+        font-size: 25px;
+        font-weight:bold;
+		padding-left:10px;
+		font-family: monotypefont;
+		width: 300px;
+		//height: 300px;
+    }
+.padding{
+	padding-left:10px;
+	padding-right: 5px;
+	padding-around: 20px;
+	 font-size:20px;
+        font-weight:bold;
+	}
+.inlinepadding{
+	display:inline;
+}

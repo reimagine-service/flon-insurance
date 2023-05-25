@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_Demo_Set_Up</fullName>
+    <columns>RS_Flow_Classification__c</columns>
+    <columns>RS_Step_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>OrderNumber__c</columns>
+    <columns>RS_Action_Name__c</columns>
+    <columns>RS_Action_Type__c</columns>
+    <columns>RS_Agent_Instructions__c</columns>
+    <columns>RS_Agent_Selection__c</columns>
+    <columns>RS_Case_Fields_to_Update__c</columns>
+    <columns>RS_AutomatedNotes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>RSI</value>
+    </filters>
+    <label>Insurance Demo Set Up</label>
+</ListView>

@@ -1,0 +1,9 @@
+<template>
+    <div if:true={displayGraphData}>
+        <template if:true={chartConfiguration}>
+            <lightning-card title="Customer Journey View" icon-name="utility:chart">   
+                <c-customer-Profile-Chart chart-config={chartConfiguration}></c-customer-Profile-Chart>
+            </lightning-card>
+    </template>
+    </div>
+</template>

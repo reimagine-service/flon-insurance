@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Cases:Policy</label>
+    <protected>false</protected>
+    <values>
+        <field>Dynamic_Field__c</field>
+        <value xsi:type="xsd:string">Account.Id</value>
+    </values>
+    <values>
+        <field>Field_Value__c</field>
+        <value xsi:type="xsd:string">RS_ObjectFormula__c,CaseNumber,Status,RS_SubType__c,CreatedDate,ClosedDate,RS_Case_Handle_Time__c,Survey_Question_Response_Image__c</value>
+    </values>
+    <values>
+        <field>Header_Value__c</field>
+        <value xsi:type="xsd:string">CaseNumber,CaseNo,Status,Subtype,CreatedDate,ClosedDate,ResolutionTime,Feedback</value>
+    </values>
+    <values>
+        <field>Limit__c</field>
+        <value xsi:type="xsd:string">5</value>
+    </values>
+    <values>
+        <field>ObjectAPI_Name__c</field>
+        <value xsi:type="xsd:string">Case</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:type="xsd:string">SELECT Status,Related_Account__r.Name,Owner.Name from MessagingSession</value>
+    </values>
+    <values>
+        <field>RS_LastNDays__c</field>
+        <value xsi:type="xsd:string">120</value>
+    </values>
+    <values>
+        <field>Static_Field__c</field>
+        <value xsi:type="xsd:string">Type=&apos;Policy&apos;</value>
+    </values>
+    <values>
+        <field>Table_Title__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">url,text,text,text,date,date,text,image</value>
+    </values>
+    <values>
+        <field>typeAttributes__c</field>
+        <value xsi:type="xsd:string">{&quot;label&quot;: { &quot;fieldName&quot;: &quot;CaseNumber&quot; }, &quot;target&quot;: &quot;_self&quot;}@
+{}@
+{}@
+{}@
+{}@
+{}@
+{}@
+{}</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_Messaging_Session_Compact_layout</fullName>
+    <fields>Related_Account__c</fields>
+    <fields>RS_Customer_reachout_reason__c</fields>
+    <fields>RS_MessagingIntent__c</fields>
+    <fields>RS_Severity__c</fields>
+    <fields>RS_Customer_authenticated__c</fields>
+    <fields>RS_Customer_verified__c</fields>
+    <label>RS_Messaging_Session_Compact_layout</label>
+</CompactLayout>

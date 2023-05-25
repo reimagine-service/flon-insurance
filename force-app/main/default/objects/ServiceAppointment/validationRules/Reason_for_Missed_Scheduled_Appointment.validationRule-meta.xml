@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Missed_Scheduled_Appointment</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR($Profile.Name=&apos;Read Only Agent&apos;,$Profile.Name=&apos;Read Only Supervisor&apos;, $Profile.Name=&apos;Read Only Insurance Agent&apos;,$Profile.Name=&apos;Read Only Service Resources&apos;),ISCHANGED(RS_Appointment_Missed__c),ISBLANK(RS_Reason_For_Missed_Appointment__c))</errorConditionFormula>
+    <errorDisplayField>RS_Reason_For_Missed_Appointment__c</errorDisplayField>
+    <errorMessage>Please Enter Reason For Missed Appointment</errorMessage>
+</ValidationRule>

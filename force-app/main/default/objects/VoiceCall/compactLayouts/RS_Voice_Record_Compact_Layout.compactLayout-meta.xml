@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_Voice_Record_Compact_Layout</fullName>
+    <fields>Related_Account__c</fields>
+    <fields>IVRType__c</fields>
+    <fields>IVRIntent__c</fields>
+    <fields>RS_Severity__c</fields>
+    <fields>RS_Customer_Identified__c</fields>
+    <fields>RS_CustomerVerified__c</fields>
+    <fields>RelatedRecordId</fields>
+    <label>RS_Voice Record Compact Layout</label>
+</CompactLayout>

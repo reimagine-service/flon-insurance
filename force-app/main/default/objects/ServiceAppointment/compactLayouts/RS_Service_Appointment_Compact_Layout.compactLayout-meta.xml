@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_Service_Appointment_Compact_Layout</fullName>
+    <fields>AppointmentNumber</fields>
+    <fields>OwnerId</fields>
+    <fields>ParentRecordId</fields>
+    <fields>WorkTypeId</fields>
+    <fields>Status</fields>
+    <fields>RS_Scheduled_Date_Time__c</fields>
+    <label>RS Service Appointment Compact Layout</label>
+</CompactLayout>

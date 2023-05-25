@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Question_Response_Image__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(RS_Survey_Question_Response__c,1,&quot;/resource/New1&quot;,
+2,&quot;/resource/New2&quot;,
+3,&quot;/resource/New3&quot;,
+4,&quot;/resource/New4&quot;,
+5,&quot;/resource/New5&quot;,
+&quot;/resource/FeedbackNo&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Survey Question Response Image</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

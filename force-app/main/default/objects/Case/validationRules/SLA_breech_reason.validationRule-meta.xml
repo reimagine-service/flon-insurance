@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SLA_breech_reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ OR(ISPICKVAL(Status, &quot;Closed&quot;),ISPICKVAL(Status, &quot;Cancelled&quot;)),
+ RSI_SLA_missed__c = true,
+ISBLANK(TEXT( RSI_SLA_Missed_Reason__c ))
+)</errorConditionFormula>
+    <errorDisplayField>RSI_SLA_Missed_Reason__c</errorDisplayField>
+    <errorMessage>Please provide reason and description for SLA breech before closing the case</errorMessage>
+</ValidationRule>

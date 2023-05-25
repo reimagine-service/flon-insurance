@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Number_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR($Profile.Name=&apos;Read Only Agent&apos;,$Profile.Name=&apos;Read Only Insurance Agent&apos;,$Profile.Name=&apos;Read Only Supervisor&apos;),
+NOT(ISNULL(Phone)),NOT(REGEX( Phone , &quot;[+][0-9]{1}[1-9]{1}[0-9]*?&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Please enter details in Phone field along with the country code to save the changes.</errorMessage>
+</ValidationRule>

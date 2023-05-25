@@ -1,0 +1,36 @@
+<template>
+<div class="slds-grid">
+<div class="slds-col" style="width: 50%;">
+    <h2 style="font-size: 20px;color:blue">FAQ</h2>
+<lightning-accordion style="font-size:16px"
+                        onsectiontoggle={handleToggleSection}  allow-multiple-sections-open>
+    <template for:each={records} for:item="obj">
+        <lightning-accordion-section key={obj.Id} name={obj.Title} label={obj.Title}>
+            <div style="font-size: 14px">
+                    <lightning-formatted-rich-text   value={obj.Content__c} ></lightning-formatted-rich-text> 
+            </div>
+        </lightning-accordion-section>
+    </template>
+</lightning-accordion>
+</div>
+
+
+<div class="slds-col" style="width: 40%; margin-left: 30px">
+    <template if:true={selectedchoice}>
+        <h3 style="font-size: 20px;color:blue">Suggested Articles</h3>
+        
+
+        <lightning-accordion style="font-size:16px"
+                        onsectiontoggle={handleToggleSectionSelected} allow-multiple-sections-open>
+            <template for:each={selectedRecords} for:item="obj">
+                <lightning-accordion-section key={obj.Id} name={obj.Title} label={obj.Title}>
+                    <div style="font-size: 14px">
+                     <lightning-formatted-rich-text   value={obj.Content__c} ></lightning-formatted-rich-text> 
+                    </div>
+                </lightning-accordion-section>
+            </template>
+</lightning-accordion>
+    </template>
+</div>
+</div>  
+</template>

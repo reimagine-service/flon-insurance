@@ -1,0 +1,6 @@
+<design:component>
+  <design:attribute name="Channel"
+                    label="Channel"
+                    datasource="SMS,Phone,Chat" />
+  <design:attribute name="checkIsIdentified" label="Required Is Identified"/>                 
+</design:component>

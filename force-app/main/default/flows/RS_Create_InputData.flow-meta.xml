@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>InputDataIDFormat</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.AccountNumber}</expression>
+    </formulas>
+    <formulas>
+        <name>PersonDOB</name>
+        <dataType>String</dataType>
+        <expression>TEXT(MONTH({!$Record.PersonBirthdate}))+ &quot;/&quot; + TEXT(DAY({!$Record.PersonBirthdate}))+ &quot;/&quot; + TEXT(YEAR({!$Record.PersonBirthdate}))</expression>
+    </formulas>
+    <formulas>
+        <name>PersonGender</name>
+        <dataType>String</dataType>
+        <expression>IF(TEXT({!$Record.Salutation}) = &quot;Mr.&quot;, &quot;M&quot;,(
+ IF(TEXT({!$Record.Salutation}) = &quot;Mrs.&quot;, &quot;F&quot;,(
+ IF(TEXT({!$Record.Salutation}) = &quot;Ms.&quot;, &quot;F&quot;,
+		NULL)))))</expression>
+    </formulas>
+    <interviewLabel>RS_Create_InputData {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RS_Create_InputData</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>CreateInputRecord</name>
+        <label>Create Input Record</label>
+        <locationX>308</locationX>
+        <locationY>288</locationY>
+        <inputAssignments>
+            <field>AccountNumber__c</field>
+            <value>
+                <elementReference>$Record.AccountNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CustomerName__c</field>
+            <value>
+                <stringValue>{!$Record.FirstName} {!$Record.LastName}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PatientDOB__c</field>
+            <value>
+                <elementReference>PersonDOB</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PatientGender__c</field>
+            <value>
+                <elementReference>PersonGender</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PatientRegion__c</field>
+            <value>
+                <elementReference>$Record.ShippingCountry</elementReference>
+            </value>
+        </inputAssignments>
+        <object>BTTS_InputData__x</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsPersonAccount</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>CreateInputRecord</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

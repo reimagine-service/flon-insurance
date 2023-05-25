@@ -1,0 +1,13 @@
+<!--
+  @description       : This class is basically for updating the records on the basis of recordId
+  @author            : Accenture
+  @group             : 
+  @last modified on  : 04-08-2022
+  @last modified by  : Accenture
+-->
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" Controller="RS_SwitchToVoiceAction" access="global" >
+	 <!-- define the attributes to be used in the component -->
+    <aura:attribute name="showModal" type="boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="showToast" type="String" />
+</aura:component>

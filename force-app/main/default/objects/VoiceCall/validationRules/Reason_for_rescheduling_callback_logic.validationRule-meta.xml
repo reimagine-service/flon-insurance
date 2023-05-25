@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_rescheduling_callback_logic</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(IF(ISNEW(),FALSE,(IF((ISPICKVAL(RS_Callback_Status__c ,&apos;Cancelled&apos;) &amp;&amp; ISCHANGED(RS_Callback_Status__c)),ISBLANK( Reason_for_cancellation__c), FALSE))),AND(NOT(ISNEW()),ISBLANK( Reason_for_cancellation__c),ISPICKVAL( RS_Callback_Status__c,&apos;Cancelled&apos;))),OR($Profile.Name=&apos;Read Only Agent&apos;,$Profile.Name=&apos;	Read Only Supervisor&apos;))</errorConditionFormula>
+    <errorMessage>Please provide the reason for cancelation.</errorMessage>
+</ValidationRule>

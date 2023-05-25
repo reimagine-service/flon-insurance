@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Auto_Response_To_Customer_On_Case_Creation_Through_Email</fullName>
+        <description>Auto Response To Customer On Case Creation Through Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>RS_Email_Template_Folder/Send_Response_To_Customer_On_Case_Creation</template>
+    </alerts>
+    <alerts>
+        <fullName>Auto_Response_to_Customer_for_Outside_business_hours</fullName>
+        <description>Auto Response to Customer for Outside business hours</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>RS_Email_Template_Folder/Auto_Response_to_customer</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Survey_Email</fullName>
+        <description>Send Survey Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>RS_Email_Template_Folder/Email_Template_for_Sending_Surveys</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>SLA_Missed</fullName>
+        <field>RSI_SLA_missed__c</field>
+        <literalValue>1</literalValue>
+        <name>SLA Missed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_Warning_Update</fullName>
+        <field>SLA_Warning__c</field>
+        <literalValue>1</literalValue>
+        <name>SLA Warning Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

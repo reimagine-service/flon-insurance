@@ -1,0 +1,30 @@
+<template>
+   <lightning-card>
+        <div class="slds-m-around_medium">
+            <template if:true={userdetails}>
+                <template for:each={userdetails} for:item="object">
+                    <div key={object.Id}>
+                <lightning-layout key={object.Id} horizontal-align={horizontalAlign}>
+                            <lightning-layout-item flexibility="auto" style="margin-left:20px">
+                    <img style="width:80px;height:80px" key={object.Id} src={object.FullPhotoUrl} alt={object.RSI_Name__c}/>
+                    </lightning-layout-item>
+                    <lightning-layout-item flexibility="auto" >
+                    <p style="font-size: 14px;margin-bottom:10px;font-weight: bold;">Your Agent</p>
+                    <p key={object.Id}><b>{object.RSI_Name__c}</b></p>
+                    <template if:true={object.Address}>
+                    <p key={object.Id}>{object.Address.street}</p>
+                    <p key={object.Id}>{object.Address.state},{object.Address.city}</p>
+                      <p key={object.Id}>{object.Address.country}</p>
+                    <p key={object.Id}>{object.Address.postalCode}</p>
+                    </template>
+                    <p key={object.Id}><b>Ph:</b>{object.Phone}</p>
+                    <p key={object.Id}><b>Email:</b>{object.Email}</p>
+                     </lightning-layout-item>
+                      </lightning-layout>
+                     </div>
+                     
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

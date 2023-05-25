@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>VoiceCall</contextRecordType>
+    <if>
+        <childNode>Get_Rec</childNode>
+        <label>Check Condition</label>
+        <name>Check_Condition</name>
+        <childNodeExpression>
+            <childName>Get_Rec</childName>
+            <expression>$Record.Related_Account__r.NBA_Billing_check__c = true</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Billing Overdue Recommendation - VC</label>
+    <recommendationLimit>
+        <childNode>Check_Condition</childNode>
+        <label>limit</label>
+        <name>limit</name>
+        <filterMode>Accepted</filterMode>
+        <filterMode>Rejected</filterMode>
+        <lookbackDuration>90</lookbackDuration>
+        <maxRecommendationCount>1</maxRecommendationCount>
+    </recommendationLimit>
+    <recommendationLoad>
+        <label>Get Rec</label>
+        <name>Get_Rec</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Bill Overdue</value>
+            </value>
+        </condition>
+        <condition>
+            <field>Object__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Voice Call</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>limit</childNode>
+        <label>Output</label>
+        <name>Output_860166d8abc14790b365f0054dd93c8b</name>
+    </union>
+</RecommendationStrategy>

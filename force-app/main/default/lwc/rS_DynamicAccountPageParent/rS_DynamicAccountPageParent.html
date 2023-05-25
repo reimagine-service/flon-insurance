@@ -1,0 +1,20 @@
+<template>
+  <table>
+    <template for:each={metarec} for:item="rec">
+      <tr  key={rec.Label__c}>
+        <td rowspan=2  style="width:50% !important">
+          <c-r-s_-customer-details  key={rec.Label__c} record-id={recordId} object-name={objectApiName} key-variable={rec.KeyVariable__c} fields={rec.Fields__c} page-title={rec.Label__c}></c-r-s_-customer-details>
+        </td>
+      </tr>
+    </template>
+  </table>
+
+  <!--table>
+     
+    <tr>
+      <td>
+          <c-r-s_customer-snapshot-tab  record-id={recordId} ></c-r-s_customer-snapshot-tab>
+      </td>
+    </tr>
+  </table-->
+</template>

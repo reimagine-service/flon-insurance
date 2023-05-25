@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>52.0</apiVersion>
+	<isExposed>true</isExposed>
+	<targets>
+		<target>lightning__RecordPage</target>
+		<target>lightning__AppPage</target>
+		<target>lightning__HomePage</target>
+	</targets>
+	<targetConfigs>
+		<targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
+			<property name="chartConfig" label="chartConfig" type="String" default=""></property>	
+			<property name="componentHeight" type="Integer" default="150" min="100" max="200" label="Component height"/>  
+		</targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>

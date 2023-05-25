@@ -1,0 +1,14 @@
+Hello {!Contact.FirstName},<br>
+<br>
+We would be grateful if you could spare 2 mins to answer a short survey and let us know how was your experience with us for your issue #{!Case.CaseNumber}. <br>
+<br>
+Customer Survey - <br> 
+{!Case.InvitationLink__c} <br>
+<br>
+* The link will be active till 3 days. <br>
+* The information gathered will be used for quality assurance only.<br>
+* We value your privacy and do not sell personal information to third parties.<br>
+<br>
+<br>
+We appreciate your time and feedback and assure you of our best services.<br>
+Thank you

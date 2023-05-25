@@ -1,0 +1,92 @@
+<template>
+
+   <div class="slds-p-around_small ldc-bg">
+        <lightning-formatted-rich-text value={agentInstruction}></lightning-formatted-rich-text>
+    </div>
+    <div class="slds-p-around_small ldc-bg">
+         <p><lightning-formatted-rich-text value={scripting}></lightning-formatted-rich-text></p>
+    </div>
+    <template if:true={additionalAgentInstructions}>
+    <div class="slds-p-around_small ldc-bg">
+         <lightning-formatted-rich-text value={additionalAgentInstructions}></lightning-formatted-rich-text>
+    </div>
+    </template>
+     <div if:true={buttonchoice}>
+        <div data-id={focus} style="margin-left: 15px" class="scrollBtm">
+            <template for:each={buttonchoice} for:item="choice">
+                <lightning-button  class="slds-button slds-m-horizontal_none"
+                    variant={choice.variant} label={choice.label} onclick={labelSelected}
+                    data-id={choice.workflowId} key={choice.workflowId}  >
+                </lightning-button>
+            </template>
+        </div>
+    </div>
+    <div if:true={pickchoice}>
+        <div data-id={focus}  style="margin-left: 15px" class="scrollBtm">
+            <template for:each={pickchoice} for:item="ch">
+                <lightning-layout key={ch.workflowId} horizontal-align={horizontalAlign}>
+                    <lightning-layout-item flexibility="auto">
+                        <div class="lwcInputElement slds-form-element slds-p-bottom_small slds-form_horizontal"> 
+                            <div class="slds-form-element__control lwcInputInner">
+                                <template if:true={picklistValues}>
+                                    <lightning-combobox class="validate strong-text"   dropdown-alignment="bottom-left" data-id={ch.workflowId} key={ch.workflowId} name="progress" label={ch.label}  value={value} options={picklistValues} onchange={savePickListValue}></lightning-combobox>
+                                </template>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item flexibility="auto">
+                        <div class="lwcInputElement slds-form-element slds-p-bottom_small slds-form_horizontal"> 
+                            <div class="slds-form-element__control lwcInputInner slds-p-top_xx-small">
+                                <lightning-button label="Submit" onclick={validateFields} data-id={ch.workflowId} key={ch.workflowId}></lightning-button>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </div>
+     </div>
+      <div if:true={datetimechoice}>
+        <div data-id={focus}  style="margin-left: 15px" class="scrollBtm">
+            <template for:each={datetimechoice} for:item="ch">
+                <lightning-layout key={ch.workflowId} horizontal-align={horizontalAlign}>
+                    <lightning-layout-item flexibility="auto">
+                        <div class="lwcInputElement slds-form-element slds-p-bottom_small slds-form_horizontal strong-text"> 
+                            <div class="slds-form-element__control lwcInputInner">
+                                <lightning-input required={ch.mandateinput} class="validate" style="font-weight: bold;" data-id={ch.workflowId}  date-style="short"  type={ch.textfielddatatype} label={ch.label} key={ch.workflowId} onchange={saveInputValue}></lightning-input>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item flexibility="auto">
+                        <div class="lwcInputElement slds-form-element slds-p-bottom_small slds-form_horizontal"> 
+                            <div class="slds-form-element__control lwcInputInner slds-p-top_large">
+                                <lightning-button label="Submit" onclick={handleDateChange} data-id={ch.workflowId} key={ch.workflowId}></lightning-button>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </div>
+    </div>
+    <div if:true={textchoice}>
+        <div data-id={focus}  style="margin-left: 15px" class="scrollBtm">
+            <template for:each={textchoice} for:item="ch">
+                <lightning-layout key={ch.workflowId} horizontal-align={horizontalAlign}>
+                    <lightning-layout-item flexibility="auto">
+                        <div class="lwcInputElement slds-form-element slds-p-bottom_small slds-form_horizontal strong-text"> 
+                            <div class="slds-form-element__control lwcInputInner">
+                                <lightning-input  required={ch.mandateinput}  class="validate" style="font-weight: bold;" data-id={ch.workflowId}  date-style="short"  type={ch.textfielddatatype} label={ch.label} key={ch.workflowId} onchange={saveInputValue}></lightning-input>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item flexibility="auto">
+                        <div class="lwcInputElement slds-form-element slds-p-bottom_small slds-form_horizontal"> 
+                            <div class="slds-form-element__control lwcInputInner slds-p-top_xx-small">
+                                <lightning-button label="Submit" onclick={validateFields} data-id={ch.workflowId} key={ch.workflowId}></lightning-button>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </div>
+    </div>
+</template>

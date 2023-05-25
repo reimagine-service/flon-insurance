@@ -1,0 +1,20 @@
+<!--Sample.cmp--> 
+<aura:component  implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+     <aura:attribute name="buttonclicked" type="Boolean" default="false"/>
+    <div class="slds-m-around_xx-large">
+        <aura:if isTrue="{!v.buttonclicked}">
+            <lightning:button variant="brand" label="Back" title="Back Action" onclick="{! c.handleBackClick }" class="slds-m-left_x-small"/>
+       <c:rS_AgentGuidedWorkflow> aura:id="lWCComponent2"></c:rS_AgentGuidedWorkflow>
+            <aura:set attribute="else">
+         <lightning:button variant="brand"   label="New Case" title="Base action" onclick="{! c.handleClick }" class="slds-float_right btnAlign"/>
+        <lightning:listView aura:id="listViewAccounts"
+                            objectApiName="Case"
+                            listName="MyOpenCases"
+                            rows="10"
+                            showActionBar="false"
+                            enableInlineEdit="true"
+                            showRowLevelActions="false"/>
+                  </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

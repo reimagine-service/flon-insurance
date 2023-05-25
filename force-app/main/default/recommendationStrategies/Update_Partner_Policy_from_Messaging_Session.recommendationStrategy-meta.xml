@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>MessagingSession</contextRecordType>
+    <if>
+        <childNode>Get_Recommendation_Record</childNode>
+        <label>Condition Check</label>
+        <name>Condition_Check</name>
+        <childNodeExpression>
+            <childName>Get_Recommendation_Record</childName>
+            <expression>ISPICKVAL($Record.Related_Account__r.Marital_Status__c, &apos;Married&apos;) &amp;&amp; $Record.RS_MessagingIntent__c = &apos;Account Information&apos; &amp;&amp; $Record.Related_Account__r.Active_Auto_Policy__c = true &amp;&amp; $Record.Related_Account__r.Auto_Policy_Recommendation__c = false</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Update Partner Policy from Messaging Session</label>
+    <recommendationLimit>
+        <childNode>Condition_Check</childNode>
+        <label>Limit</label>
+        <name>Limit</name>
+        <filterMode>Accepted</filterMode>
+        <filterMode>Rejected</filterMode>
+        <lookbackDuration>90</lookbackDuration>
+        <maxRecommendationCount>1</maxRecommendationCount>
+    </recommendationLimit>
+    <recommendationLoad>
+        <label>Get Recommendation Record</label>
+        <name>Get_Recommendation_Record</name>
+        <condition>
+            <field>Object__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Messaging Session</value>
+            </value>
+        </condition>
+        <condition>
+            <field>Issue_Type__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Account Information</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Limit</childNode>
+        <label>Output</label>
+        <name>Output_0f58610b2fea472a990983af9789d2d5</name>
+    </union>
+</RecommendationStrategy>

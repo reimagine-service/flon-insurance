@@ -1,0 +1,71 @@
+<!--
+  @description       : 
+  @author            : Accenture
+  @group             : 
+  @last modified on  : 04-11-2022
+  @last modified by  : Accenture
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" Controller='RS_customerAllOpenCases' access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="pageNumber" type="Integer" default="1"/>
+    <aura:attribute name="pageSize" type="Integer" default="5"/>
+    <aura:attribute name="isLastPage" type="Boolean" default="false"/>
+    <aura:attribute name="dataSize" type="Integer" default="0"/> 
+    <aura:attribute name="Channel" type="String"/>
+    <aura:attribute name="checkIsIdentified" type="Boolean" default="false"/>
+    <aura:attribute name="UserMessage" type="Boolean" default="false"/>
+    <aura:attribute name="AccountName" type="String" />
+     <aura:attribute name="initialData" type="String" default="false" />
+    
+    <lightning:card  variant="Narrow" class="narrowcard">
+    
+    <article class="slds-card">
+        <div class="slds-card__header">
+            <div class="slds-var-p-bottom_medium">
+                <div class="slds-col">
+                    <lightning:layout> 
+                        <div class="slds-media__figure slds-border">
+                            <span class="slds-avatar">
+                                <img src="{!$Resource.RS_RelatedCaseAgent}"/>
+                            </span>
+                        </div>
+                        <lightning:layoutItem padding="horizontal-xxx-small">
+                            <div class="page-section page-header">
+                                <div class="slds-media__body slds-text-heading--small">
+                                    <h1>
+                                        <a class="slds-card__header-link slds-truncate slds-show--inline-block slds-page-header__title">Related Cases</a></h1>
+                                </div>
+                            </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                
+                <aura:if isTrue="{!v.UserMessage}">
+                    <p class="slds-page-header__title">There are no existing open cases for this customer.</p>
+                    <aura:set attribute="else">
+                        <div style="width:100%">
+                        <lightning:datatable aura:id = "accDT"
+                                             columns = "{!v.columns}"
+                                             maxRowSelection="{!v.maxRowSelection}"
+                                             data = "{!v.data}"
+                                             keyField = "Id"
+                                             selectedRows = "{!v.selectedRowList}"
+                                             onrowaction="{!c.handleRowAction}"/>
+                        </div>
+                        <p class="slds-page-header__title">Page {!v.pageNumber}</p>
+                        <div class="slds-float_right">            
+                            <lightning:button label="Prev" iconName="utility:chevronleft" iconPosition="left"
+                                              onclick="{!c.handlePrev}" disabled="{! v.pageNumber == 1}"/>
+                            <lightning:button label="Next" iconName="utility:chevronright" iconPosition="right"
+                                              disabled="{!v.isLastPage}" onclick="{!c.handleNext}"/>
+                        </div>
+                    </aura:set>
+                </aura:if>
+                </div>
+            </div>
+        </div>
+   
+    </article>
+    </lightning:card>
+</aura:component>

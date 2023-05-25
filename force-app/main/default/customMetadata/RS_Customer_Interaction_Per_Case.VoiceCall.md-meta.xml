@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>VoiceCall</label>
+    <protected>false</protected>
+    <values>
+        <field>Dynamic_Field__c</field>
+        <value xsi:type="xsd:string">(CallAcceptDateTime!=null OR RS_Appointment_Scheduled__c=true)</value>
+    </values>
+    <values>
+        <field>Interaction_Call_Type__c</field>
+        <value xsi:type="xsd:string">CallType</value>
+    </values>
+    <values>
+        <field>Interaction_Duration__c</field>
+        <value xsi:type="xsd:string">CallDurationInSeconds</value>
+    </values>
+    <values>
+        <field>Interaction_From__c</field>
+        <value xsi:type="xsd:string">FromPhoneNumber</value>
+    </values>
+    <values>
+        <field>Interaction_Name__c</field>
+        <value xsi:type="xsd:string">RS_ID__c</value>
+    </values>
+    <values>
+        <field>Interaction_Status__c</field>
+        <value xsi:type="xsd:string">CallDisposition</value>
+    </values>
+    <values>
+        <field>Interaction_Time_Field__c</field>
+        <value xsi:type="xsd:string">CallAcceptDateTime</value>
+    </values>
+    <values>
+        <field>Interaction_Type__c</field>
+        <value xsi:type="xsd:string">Phone</value>
+    </values>
+    <values>
+        <field>OrderBy_Field__c</field>
+        <value xsi:type="xsd:string">CallAcceptDateTime</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:type="xsd:string">SELECT Id,RS_ID__c,CallDurationInSeconds,CallAcceptDateTime, CallType, Description, FromPhoneNumber, CallStartDateTime,CallEndDateTime,CallDisposition FROM VoiceCall</value>
+    </values>
+    <values>
+        <field>Static_Field__c</field>
+        <value xsi:type="xsd:string">RelatedRecordId</value>
+    </values>
+</CustomMetadata>

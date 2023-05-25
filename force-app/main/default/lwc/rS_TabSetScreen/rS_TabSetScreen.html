@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : joel.samuel.s.penke@accenture.com
+  @group             : SF
+  @last modified on  : 06-29-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <template if:true={isTabs} >
+    <lightning-tabset style="display: none">
+        <template for:each={tabs} for:item="tab" class="slds-m-top_none">
+            <lightning-tab key={tab.TabName} label = {tab.TabName} onactive={handleActive} id={tab.Name} style="padding-top: 0px !important"></lightning-tab>
+        </template>
+    </lightning-tabset>
+    </template>
+
+    <template if:true ={isSubTabs}>
+    <lightning-tabset>
+        <template for:each={subTabs} for:item="subtab">
+            <lightning-tab key={subtab.TabName} label = {subtab.TabName} onactive={handleActiveSubtab} id={subtab.Name}></lightning-tab>
+        </template>
+    </lightning-tabset>
+    </template>
+</template>

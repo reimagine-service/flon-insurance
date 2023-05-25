@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Appointments:Incorrect_Invoice</label>
+    <protected>false</protected>
+    <values>
+        <field>Dynamic_Field__c</field>
+        <value xsi:type="xsd:string">ServiceAppointment.RS_Account__c</value>
+    </values>
+    <values>
+        <field>Field_Value__c</field>
+        <value xsi:type="xsd:string">ServiceAppointment.AppointmentNumber,ServiceAppointment.WorkType__c,ServiceAppointment.RS_CaseIssueType__c, ServiceAppointment.RS_Start_Time__c,ServiceAppointment.RS_ObjectFormula__c,ServiceAppointment.Case__c,ServiceResource.Name,ServiceAppointment.Status</value>
+    </values>
+    <values>
+        <field>Header_Value__c</field>
+        <value xsi:type="xsd:string">Appointment ID, Work Type, Issue Type,Date &amp; Time, Case Number, CaseNo, Service Resource, Status</value>
+    </values>
+    <values>
+        <field>Limit__c</field>
+        <value xsi:type="xsd:string">50</value>
+    </values>
+    <values>
+        <field>ObjectAPI_Name__c</field>
+        <value xsi:type="xsd:string">AssignedResource</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RS_LastNDays__c</field>
+        <value xsi:type="xsd:string">100</value>
+    </values>
+    <values>
+        <field>Static_Field__c</field>
+        <value xsi:type="xsd:string">(ServiceAppointment.WorkType.Name = &apos;Incorrect Invoicing&apos;)</value>
+    </values>
+    <values>
+        <field>Table_Title__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">text,text,text,Date/Time,url,text,text,text</value>
+    </values>
+    <values>
+        <field>typeAttributes__c</field>
+        <value xsi:type="xsd:string">{}@
+{}@
+{}@
+{}@
+{&quot;label&quot;: { &quot;fieldName&quot;: &quot;ServiceAppointment.Case__c&quot; }, &quot;target&quot;: &quot;_self&quot;}@
+{}@
+{}@
+{}</value>
+    </values>
+</CustomMetadata>

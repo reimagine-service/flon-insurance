@@ -1,0 +1,35 @@
+<template>
+<div>
+  <template if:true={isLoaded} >
+    <lightning-card>
+      <lightning-layout multiple-rows="false" pull-to-boundary="small">
+        <lightning-layout-item size="12" style="width: 100%;height: 250px !important;">
+          <div class="slds-gutters" >
+            <div class="slds-col">
+              <div class="slds-col slds-form-element" style="margin-left:10Px;margin-right:10Px"> 
+                <span class="slds-text-heading_medium slds-card__header-link padding">{pageTitle}
+                  <template if:true={isKeyVaraible}>
+                    <template for:each={hightlighpanelList} for:item="res">
+                      <span key={res.id} style="padding-left:10px;display:inline;">
+                        <c-r-s_-account-page-highlight-panel key={res.label} record-id={recordId} object-name={objectApiName} badgeslabel={res.label} code={res.colorCode}></c-r-s_-account-page-highlight-panel>
+                      </span>
+                    </template>
+                  </template>
+                </span>
+                <lightning-record-form object-api-name={objectName}
+                style="padding-left:10px;padding-right: 5px;padding-around: 20px;width:50% !important"
+                class="padding"
+                  record-id={recordId}  
+                  columns=2 mode="readonly"
+                  fields={fieldSet}>
+                </lightning-record-form>
+              </div>
+            </div>
+          </div>
+        </lightning-layout-item>
+      </lightning-layout>
+    </lightning-card>
+    <div class="map-root" lwc:dom="manual"></div>
+  </template>
+</div>
+</template>

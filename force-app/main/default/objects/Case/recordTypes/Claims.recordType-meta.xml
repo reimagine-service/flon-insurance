@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claims</fullName>
+    <active>true</active>
+    <businessProcess>Case  Support Process</businessProcess>
+    <label>Claims</label>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RSI_SLA_Missed_Reason__c</picklist>
+        <values>
+            <fullName>3rd party delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Volume delay</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RSI_Schedule_Appointment__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RSI_State__c</picklist>
+        <values>
+            <fullName>Arizona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>California</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IOWA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minnesota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nebraska</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nevada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ohio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RSI_Status_Closed__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RS_Case_Resolution__c</picklist>
+        <values>
+            <fullName>Customer Information Updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Policy Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policy Renewed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policy Updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Query Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved%C2%A0By%C2%A0Bot</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RS_SubType__c</picklist>
+        <values>
+            <fullName>Add Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancel Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check Bill Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Invoicing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pay Bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raise a claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Existing Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revise a claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Account Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Policy</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Claims</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Email_Received_outside_business_hrs__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Created_Day__c  = &apos;Monday&apos; &amp;&amp; TIMEVALUE(CreatedDate - (   VALUE($Label.RS_EST_TimeZone) * 0.04167)) &gt; Parent.BusinessHours.MondayStartTime &amp;&amp; TIMEVALUE(CreatedDate - (  $CustomMetadata.RS_VoiceCall_OwnerId__mdt.Integration_User.Time_Zone__c * 0.04167)) &lt; Parent.BusinessHours.MondayEndTime ,
+false,
+  IF(Created_Day__c  = &apos;Tuesday&apos; &amp;&amp; TIMEVALUE(CreatedDate - (  VALUE($Label.RS_EST_TimeZone) * 0.04167)) &gt; Parent.BusinessHours.TuesdayStartTime &amp;&amp; TIMEVALUE(CreatedDate - (  $CustomMetadata.RS_VoiceCall_OwnerId__mdt.Integration_User.Time_Zone__c * 0.04167)) &lt; Parent.BusinessHours.TuesdayEndTime, false, 
+ IF(Created_Day__c  = &apos;Wednesday&apos; &amp;&amp; TIMEVALUE(CreatedDate - (  VALUE($Label.RS_EST_TimeZone) * 0.04167)) &gt; Parent.BusinessHours.WednesdayStartTime &amp;&amp; TIMEVALUE(CreatedDate - (  $CustomMetadata.RS_VoiceCall_OwnerId__mdt.Integration_User.Time_Zone__c * 0.04167)) &lt; Parent.BusinessHours.WednesdayEndTime, 
+false, 
+ IF(Created_Day__c  = &apos;Thursday&apos; &amp;&amp; TIMEVALUE(CreatedDate - (  VALUE($Label.RS_EST_TimeZone) * 0.04167)) &gt; Parent.BusinessHours.ThursdayStartTime &amp;&amp; TIMEVALUE(CreatedDate - (  $CustomMetadata.RS_VoiceCall_OwnerId__mdt.Integration_User.Time_Zone__c * 0.04167)) &lt; Parent.BusinessHours.ThursdayEndTime, false, 
+ IF(Created_Day__c  = &apos;Friday&apos; &amp;&amp; TIMEVALUE(CreatedDate - (  VALUE($Label.RS_EST_TimeZone) * 0.04167)) &gt; Parent.BusinessHours.FridayStartTime &amp;&amp; TIMEVALUE(CreatedDate - (  $CustomMetadata.RS_VoiceCall_OwnerId__mdt.Integration_User.Time_Zone__c * 0.04167)) &lt; Parent.BusinessHours.FridayEndTime, 
+false, 
+true
+) 
+) 
+) 
+) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Email Received outside business hrs?</label>
+    <type>Checkbox</type>
+</CustomField>

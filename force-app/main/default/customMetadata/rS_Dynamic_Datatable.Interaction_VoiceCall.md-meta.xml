@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Interaction:Voice_Call</label>
+    <protected>false</protected>
+    <values>
+        <field>Dynamic_Field__c</field>
+        <value xsi:type="xsd:string">Related_Account__c</value>
+    </values>
+    <values>
+        <field>Field_Value__c</field>
+        <value xsi:type="xsd:string">CreatedDate,RS_ID_Link__c,RS_ID__c,RS_ObjectFormula__c,RelatedRecord.Name,IVRIntent__c,CallDurationInSeconds,User.Name,Customer_Sentiments__c</value>
+    </values>
+    <values>
+        <field>Header_Value__c</field>
+        <value xsi:type="xsd:string">Date,VoiceCall Id,CaseNo,CaseNumber,CaseNo,Issue,Duration(sec),Interacted with,Sentiment</value>
+    </values>
+    <values>
+        <field>Limit__c</field>
+        <value xsi:type="xsd:string">20</value>
+    </values>
+    <values>
+        <field>ObjectAPI_Name__c</field>
+        <value xsi:type="xsd:string">VoiceCall</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RS_LastNDays__c</field>
+        <value xsi:type="xsd:string">120</value>
+    </values>
+    <values>
+        <field>Static_Field__c</field>
+        <value xsi:type="xsd:string">(RS_Callback_Status__c = &apos;completed&apos; or RS_Callback_Status__c = &apos;&apos;)</value>
+    </values>
+    <values>
+        <field>Table_Title__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">date,url,text,url,text,text,text,text,text</value>
+    </values>
+    <values>
+        <field>typeAttributes__c</field>
+        <value xsi:type="xsd:string">{}@
+{&quot;label&quot;: { &quot;fieldName&quot;: &quot;RS_ID__c&quot; }, &quot;target&quot;: &quot;_self&quot;}@
+{}@
+{&quot;label&quot;: { &quot;fieldName&quot;: &quot;RelatedRecord.Name&quot; }, &quot;target&quot;: &quot;_self&quot;}@
+{}@
+{}@
+{}@
+{}@
+{}</value>
+    </values>
+</CustomMetadata>

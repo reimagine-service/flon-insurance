@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Appointment List</label>
+    <protected>false</protected>
+    <values>
+        <field>Dynamic_Field__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Field_Value__c</field>
+        <value xsi:type="xsd:string">AppointmentNumber, WorkType__c, RS_Start_Time__c, RS_ObjectFormula__c,RS_Case__r.CaseNumber,Status</value>
+    </values>
+    <values>
+        <field>Header_Value__c</field>
+        <value xsi:type="xsd:string">Appointment Number, Work Type, Scheduled Date &amp; Time, Case Number,CaseNo,Status</value>
+    </values>
+    <values>
+        <field>Limit__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPI_Name__c</field>
+        <value xsi:type="xsd:string">ServiceAppointment</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RS_LastNDays__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Static_Field__c</field>
+        <value xsi:type="xsd:string">RS_Account__c</value>
+    </values>
+    <values>
+        <field>Table_Title__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">text,text,Date/Time,url,text,text</value>
+    </values>
+    <values>
+        <field>typeAttributes__c</field>
+        <value xsi:type="xsd:string">{}@
+{}@
+{}@
+{&quot;label&quot;: { &quot;fieldName&quot;: &quot;RS_Case__r.CaseNumber&quot; }, &quot;target&quot;: &quot;_self&quot;}@
+{}@
+{}</value>
+    </values>
+</CustomMetadata>

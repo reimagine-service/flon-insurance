@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>1</label>
+    <protected>false</protected>
+    <values>
+        <field>Document_Name__c</field>
+        <value xsi:type="xsd:string">predictiveservices</value>
+    </values>
+    <values>
+        <field>Einstein_API__c</field>
+        <value xsi:type="xsd:string">https://api.einstein.ai/v2/language/sentiment</value>
+    </values>
+    <values>
+        <field>Endpoint__c</field>
+        <value xsi:type="xsd:string">https://api.metamind.io/v1/oauth2/token</value>
+    </values>
+    <values>
+        <field>JWT_Certificate__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>JWT_Email__c</field>
+        <value xsi:type="xsd:string">pravin.choubey89@gmail.com</value>
+    </values>
+    <values>
+        <field>Model__c</field>
+        <value xsi:type="xsd:string">CommunitySentiment</value>
+    </values>
+</CustomMetadata>

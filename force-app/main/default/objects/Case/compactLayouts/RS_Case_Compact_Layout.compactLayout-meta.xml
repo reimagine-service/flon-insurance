@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_Case_Compact_Layout</fullName>
+    <fields>CaseNumber</fields>
+    <fields>Subject</fields>
+    <fields>Status</fields>
+    <fields>AccountId</fields>
+    <fields>Type</fields>
+    <fields>RSI_SLA_missed__c</fields>
+    <fields>OwnerId</fields>
+    <label>RS_Case Compact Layout</label>
+</CompactLayout>

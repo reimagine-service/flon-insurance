@@ -1,0 +1,66 @@
+<!--
+  @description       : 
+  @author            : joel.samuel.s.penke@accenture.com
+  @group             : 
+  @last modified on  : 06-15-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    
+    <lightning-card title="Confirmation Screen">
+        <div class="slds-box" >
+        <template if:true={isLoaded}>
+        <lightning-record-edit-form object-api-name={objName} onsubmit ={handleSubmit} onsuccess={handleSuccess} onerror={handleError} >
+            <lightning-messages>
+            </lightning-messages>
+            <template if:true={fieldsList}>
+                <template for:each={fieldsList} for:item="field">
+                    <template if:true={field.isSection}>
+                        <div class="slds-section slds-is-open" key={field.Name}>
+                            <h4 class="slds-section__title slds-theme_shade">
+                            <span class="slds-truncate slds-p-horizontal_small" title={field.Name}>{field.Name}</span>
+                            </h4>
+                        </div>
+                    </template> 
+                    <template if:true={field.isrecordtype}>
+                        <lightning-input-field class="slds-hidden" key={field.Name} field-name={field.Name} value={field.Value} disabled={field.isDisabled}></lightning-input-field>
+                    </template>
+                    <template if:false={field.isOwner}>
+                    <template if:false={field.isrecordtype}>
+                        <lightning-input-field key={field.Name} field-name={field.Name} value={field.Value} disabled={field.isDisabled}></lightning-input-field>
+                    </template>
+                    </template>
+
+                        <template if:true={field.isOwner}>
+                            <lightning-input-field key={field.Name} field-name={field.Name} value={field.Value} disabled={field.isDisabled}></lightning-input-field>
+                        </template>
+                    <!--/template-->
+
+                </template>
+                <template if:true={showSave}>
+                <lightning-button
+            class="slds-m-top_small slds-align_absolute-center"
+            variant="brand"
+            type="submit"
+            name="Save"
+            label="Save"
+            disabled={isSpinner}>
+        </lightning-button>
+        
+    </template>
+
+           </template>
+           <template if:false={showSave}>
+            <b class="slds-align_absolute-center">
+                Case &nbsp;<lightning-formatted-url value={sfdcBaseURL} target="_self" label={casenumber}></lightning-formatted-url> &nbsp;
+           has been Successfully Created!!
+                <!--lightning-formatted-text value={successMessage}></lightning-formatted-text--></b>
+        </template>
+           <template if:true={isSpinner}>
+               <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+           </template>
+        </lightning-record-edit-form>
+    </template>
+    </div>
+    </lightning-card>
+</template>

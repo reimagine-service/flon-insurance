@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Sentiment Score List</label>
+    <protected>false</protected>
+    <values>
+        <field>Dynamic_Field__c</field>
+        <value xsi:type="xsd:string">Case__r.accountid</value>
+    </values>
+    <values>
+        <field>Field_Value__c</field>
+        <value xsi:type="xsd:string">Case__r.id,Case__r.Type,sentiment_value__c,Customer_Sentiments__c,Case__r.Casenumber,Case__r.Status,LastModifiedDate</value>
+    </values>
+    <values>
+        <field>Header_Value__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Limit__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ObjectAPI_Name__c</field>
+        <value xsi:type="xsd:string">Sentiment_Score__c</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RS_LastNDays__c</field>
+        <value xsi:type="xsd:string">120</value>
+    </values>
+    <values>
+        <field>Static_Field__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Table_Title__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>typeAttributes__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

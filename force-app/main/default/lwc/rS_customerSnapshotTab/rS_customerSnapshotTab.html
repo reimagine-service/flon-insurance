@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <!--template if:false={isLoaded}-->
+        <c-r-s_-tab-set-screen level={clevel} parent={tabLabel} onselectedtab={selectedTabHandler} style="padding-top:0px !important"></c-r-s_-tab-set-screen>
+        <template if:true={loadDatatable}>
+         
+            <c-r-s_-dynamic_-data-table tablabel={dataTableParam} record-id={recordId} ></c-r-s_-dynamic_-data-table>
+            <!-- <div style="height:60px; margin:20px; margin-bottom:150px;"> -->
+                <c-r-s_-customer-profile-related-list str-tab-information={dataTableParam} record-id={recordId}></c-r-s_-customer-profile-related-list>
+            <!-- </div> -->
+        </template>      
+    </lightning-card>
+</template>

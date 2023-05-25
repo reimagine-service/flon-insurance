@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>CDF1:SUM/RowCount*100</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Summary level formula to calculate overall NPS score</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>GRAND_SUMMARY</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Overall NPS Score</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(SurveyQuestionResponse.NumberValue&gt;=9,1,IF(SurveyQuestionResponse.NumberValue&gt;=7,0,-1))</calculatedFormula>
+        <dataType>Double</dataType>
+        <description>Calculates row-level NPS score</description>
+        <developerName>CDF1</developerName>
+        <label>NPS Score</label>
+        <scale>0</scale>
+    </customDetailFormulas>
+    <description>This report calculates the Overall NPS score for customer feedback</description>
+    <filter>
+        <criteriaItems>
+            <column>Survey.SurveyInvitations.SurveyResponses.SurveyQuestionResponses$Question</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>How likely are you to recommend us to friends and family?</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Survey.SurveyInvitations.SurveyResponses$Survey</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>RS Survey v0.1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey.SurveyInvitations.SurveyResponses.SurveyQuestionResponses$ResponseValue</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NPS Score Cumulative</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Survey_with_survey_questions_and_responses__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Survey$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

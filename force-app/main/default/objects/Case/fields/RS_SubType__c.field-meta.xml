@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_SubType__c</fullName>
+    <externalId>false</externalId>
+    <label>SubType</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Check Bill Balance</fullName>
+                <default>false</default>
+                <label>Check Bill Balance</label>
+            </value>
+            <value>
+                <fullName>Pay Bill</fullName>
+                <default>false</default>
+                <label>Pay Bill</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Add Policy</fullName>
+                <default>false</default>
+                <label>Add Policy</label>
+            </value>
+            <value>
+                <fullName>Update Policy</fullName>
+                <default>false</default>
+                <label>Update Policy</label>
+            </value>
+            <value>
+                <fullName>Cancel Policy</fullName>
+                <default>false</default>
+                <label>Cancel Policy</label>
+            </value>
+            <value>
+                <fullName>Review Existing Policy</fullName>
+                <default>false</default>
+                <label>Review Existing Policy</label>
+            </value>
+            <value>
+                <fullName>Update Account Information</fullName>
+                <default>false</default>
+                <label>Update Account Information</label>
+            </value>
+            <value>
+                <fullName>Raise a claim</fullName>
+                <default>false</default>
+                <label>Raise a claim</label>
+            </value>
+            <value>
+                <fullName>Revise a claim</fullName>
+                <default>false</default>
+                <label>Revise a claim</label>
+            </value>
+            <value>
+                <fullName>Incorrect Invoicing</fullName>
+                <default>false</default>
+                <label>Incorrect Invoicing</label>
+            </value>
+            <value>
+                <fullName>Renewals</fullName>
+                <default>false</default>
+                <label>Renewals</label>
+            </value>
+            <value>
+                <fullName>Complete Certification</fullName>
+                <default>false</default>
+                <label>Complete Certification</label>
+            </value>
+            <value>
+                <fullName>Check Claim status</fullName>
+                <default>false</default>
+                <label>Check Claim status</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Claims</controllingFieldValue>
+            <controllingFieldValue>Account Information Update</controllingFieldValue>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Claims</controllingFieldValue>
+            <valueName>Raise a claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Claims</controllingFieldValue>
+            <valueName>Revise a claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy</controllingFieldValue>
+            <valueName>Add Policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy</controllingFieldValue>
+            <valueName>Update Policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy</controllingFieldValue>
+            <valueName>Cancel Policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy</controllingFieldValue>
+            <valueName>Review Existing Policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Information Update</controllingFieldValue>
+            <valueName>Update Account Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Check Bill Balance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Pay Bill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Incorrect Invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Renewals</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

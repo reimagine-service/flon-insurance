@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Case</contextRecordType>
+    <if>
+        <childNode>Recommendation_for_Minnessota</childNode>
+        <label>Condition</label>
+        <name>Condition</name>
+        <childNodeExpression>
+            <childName>Recommendation_for_Minnessota</childName>
+            <expression>ISPICKVAL($Record.Type, &apos;Policy&apos;) &amp;&amp; NOT(ISPICKVAL($Record.Status, &apos;Closed&apos;)) &amp;&amp; $Record.RSI_Transfer_to_new_state__c = true &amp;&amp; $Record.Account.Active_Home_Policy__c = true &amp;&amp; $Record.NBA_Minnessota_Check__c = true</expression>
+        </childNodeExpression>
+        <onlyFirstMatch>false</onlyFirstMatch>
+    </if>
+    <label>Home Insurance minnesotta</label>
+    <recommendationLimit>
+        <childNode>Condition</childNode>
+        <label>limit</label>
+        <name>limit</name>
+        <filterMode>Accepted</filterMode>
+        <filterMode>Rejected</filterMode>
+        <lookbackDuration>90</lookbackDuration>
+        <maxRecommendationCount>1</maxRecommendationCount>
+    </recommendationLimit>
+    <recommendationLoad>
+        <label>Recommendation for Minnessota</label>
+        <name>Recommendation_for_Minnessota</name>
+        <condition>
+            <field>Name</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>New Policy coverage for Home insurance Minnesota</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>limit</childNode>
+        <label>Output</label>
+        <name>Output_bf6237c610664f878c1246cb7fa13f4b</name>
+    </union>
+</RecommendationStrategy>

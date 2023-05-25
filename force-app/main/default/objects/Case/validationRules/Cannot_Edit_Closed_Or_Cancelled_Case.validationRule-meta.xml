@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Edit_Closed_Or_Cancelled_Case</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR($Profile.Name=&apos;Read Only Agent&apos;,$Profile.Name=&apos;Read Only Supervisor&apos;,	$Profile.Name=&apos;Read Only Insurance Agent&apos;), OR(ISPICKVAL(PRIORVALUE(Status), &quot;Closed&quot;),ISPICKVAL(PRIORVALUE(Status), &quot;Cancelled&quot;)),!ISCHANGED(InvitationLink__c),!ISCHANGED(Survey_Submitted__c),!ISCHANGED(RS_Survey_Question_Response__c),!ISCHANGED(Survey_Question_Response_Image__c),!ISCHANGED( Date_Time_Closed_Cancelled__c), !ISCHANGED(IsStopped),!ISCHANGED(StopStartDate), !ISCHANGED(   Estimated_Due_Date__c),!ISCHANGED(RSI_SLA_missed__c),!ISCHANGED( SlaStartDate ),!ISCHANGED( SlaExitDate )  
+)</errorConditionFormula>
+    <errorMessage>Cannot Edit Closed Or Cancelled Case</errorMessage>
+</ValidationRule>
