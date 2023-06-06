@@ -12,7 +12,7 @@
   "name": "RS_R4_INS_Package",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "56.0",
+  "sourceApiVersion": "57.0",
   "packageAliases": {
     "rsinsfullpackage": "0Ho5f0000010wa9CAA",
     "rsinsfullpackage@0.1.0-1": "04t5f000000SM21AAG",
