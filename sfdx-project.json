@@ -1,31 +1,39 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true,
-      "package": "rsinsfullpackage",
-      "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT",
-      "versionDescription": "Reimgine Insurance Service - Full Package "
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "rsinsfullpackage",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "versionDescription": "Reimgine Insurance Service - Full Package "
+        },
+        {
+            "path": "force-app",
+            "package": "test componet pkg",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
+        }
+    ],
+    "name": "RS_R4_INS_Package",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "57.0",
+    "packageAliases": {
+        "rsinsfullpackage": "0Ho5f0000010wa9CAA",
+        "rsinsfullpackage@0.1.0-1": "04t5f000000SM21AAG",
+        "rsinsfullpackage@0.1.0-2": "04t5f000000SM26AAG",
+        "rsinsfullpackage@0.1.0-3": "04t5f000000SM2BAAW",
+        "rsinsfullpackage@0.1.0-4": "04t5f000000SM2GAAW",
+        "rsinsfullpackage@0.1.0-5": "04t5f000000SM2LAAW",
+        "rsinsfullpackage@0.1.0-6": "04t5f000000SM2QAAW",
+        "rsinsfullpackage@0.1.0-7": "04t5f000000SM2VAAW",
+        "rsinsfullpackage@0.1.0-8": "04t5f000000SM2aAAG",
+        "rsinsfullpackage@0.1.0-9": "04t5f000000SM2fAAG",
+        "rsinsfullpackage@0.1.0-10": "04t5f000000SM2kAAG",
+        "rsinsfullpackage@0.1.0-11": "04t5f000000SM2pAAG",
+        "rsinsfullpackage@0.1.0-12": "04t5f000000SM2uAAG",
+        "test componet pkg": "0HoDn000000bmvWKAQ"
     }
-  ],
-  "name": "RS_R4_INS_Package",
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "57.0",
-  "packageAliases": {
-    "rsinsfullpackage": "0Ho5f0000010wa9CAA",
-    "rsinsfullpackage@0.1.0-1": "04t5f000000SM21AAG",
-    "rsinsfullpackage@0.1.0-2": "04t5f000000SM26AAG",
-    "rsinsfullpackage@0.1.0-3": "04t5f000000SM2BAAW",
-    "rsinsfullpackage@0.1.0-4": "04t5f000000SM2GAAW",
-    "rsinsfullpackage@0.1.0-5": "04t5f000000SM2LAAW",
-    "rsinsfullpackage@0.1.0-6": "04t5f000000SM2QAAW",
-    "rsinsfullpackage@0.1.0-7": "04t5f000000SM2VAAW",
-    "rsinsfullpackage@0.1.0-8": "04t5f000000SM2aAAG",
-    "rsinsfullpackage@0.1.0-9": "04t5f000000SM2fAAG",
-    "rsinsfullpackage@0.1.0-10": "04t5f000000SM2kAAG",
-    "rsinsfullpackage@0.1.0-11": "04t5f000000SM2pAAG",
-    "rsinsfullpackage@0.1.0-12": "04t5f000000SM2uAAG"
-  }
 }
