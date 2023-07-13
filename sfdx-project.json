@@ -21,6 +21,13 @@
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
             "default": false
+        },
+        {
+            "path": "force-app",
+            "package": "RSPROD",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
         }
     ],
     "name": "RS_R4_INS_Package",
@@ -43,6 +50,7 @@
         "rsinsfullpackage@0.1.0-12": "04t5f000000SM2uAAG",
         "RS FLON Pkg Test": "0HoDn000000bmvRKAQ",
         "RS FLON Pkg Test@0.0.1-0-main": "04tDn000000Az56IAC",
-        "RS Prod test pkg": "0HoDn000000bmwUKAQ"
+        "RS Prod test pkg": "0HoDn000000bmwUKAQ",
+        "RSPROD": "0HoDn000000bmwZKAQ"
     }
 }
