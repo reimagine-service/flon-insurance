@@ -28,6 +28,13 @@
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
             "default": false
+        },
+        {
+            "path": "force-app",
+            "package": "RSSamPkg",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
         }
     ],
     "name": "RS_R4_INS_Package",
@@ -51,6 +58,7 @@
         "RS FLON Pkg Test": "0HoDn000000bmvRKAQ",
         "RS FLON Pkg Test@0.0.1-0-main": "04tDn000000Az56IAC",
         "RS Prod test pkg": "0HoDn000000bmwUKAQ",
-        "RSPROD": "0HoDn000000bmwZKAQ"
+        "RSPROD": "0HoDn000000bmwZKAQ",
+        "RSSamPkg": "0Ho5f0000010waiCAA"
     }
 }
